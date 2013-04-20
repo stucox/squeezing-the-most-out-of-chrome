@@ -2,7 +2,7 @@
 
 Here are the slides for a talk I did at [@GDGBristol](https://twitter.com/gdgbristol) about using some of the new(ish) features in Google Chrome:
 
-[]()
+**[Squeezing The Most Out Of Chrome](http://rawgithub.com/stucox/squeezing-the-most-out-of-chrome/SqueezingTheMostOutOfChrome.pdf)**
 
 I accompanied it with a series of simple demos:
 
