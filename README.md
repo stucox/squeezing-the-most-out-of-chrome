@@ -2,7 +2,7 @@
 
 Here are the slides for a talk I did at [@GDGBristol](https://twitter.com/gdgbristol) about using some of the new(ish) features in Google Chrome:
 
-**[Squeezing The Most Out Of Chrome](http://rawgithub.com/stucox/squeezing-the-most-out-of-chrome/SqueezingTheMostOutOfChrome.pdf)**
+**[Squeezing The Most Out Of Chrome](http://rawgithub.com/stucox/squeezing-the-most-out-of-chrome/master/SqueezingTheMostOutOfChrome.pdf)**
 
 I accompanied it with a series of simple demos:
 
@@ -14,4 +14,4 @@ I accompanied it with a series of simple demos:
 * [Mutation Observers](http://rawgithub.com/stucox/squeezing-the-most-out-of-chrome/master/mutation.html)
 * [Shadow DOM](http://rawgithub.com/stucox/squeezing-the-most-out-of-chrome/master/shadow.html)
 
-The code for all of these can be found in this repo. All code is in the public domain, but if you use it in a demo / blog context a mention would be nice!
+The code for all of these can be found in this repo. All demo code is in the public domain, but if you use it in a demo / blog context a mention would be nice!
