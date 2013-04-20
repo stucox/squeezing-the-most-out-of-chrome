@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Filters Demo</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+  <style>
+  .orange {
+    -webkit-filter: blur(10px);
+    -webkit-transition: -webkit-filter 0.5s;
+  }
+  .orange:hover {
+    -webkit-filter: blur(0);
+    -webkit-transition: -webkit-filter 0s;
+  }
+  </style>
+</head>
+<body>
+
+<h1>Demo 1: CSS Filters</h1>
+
+<div class="demo">
+  <h2>Demo</h2>
+  <a class="orange" href="#">
+    <img src="orange.png">
+  </a>
+</div>
+
+<div class="code">
+  <h2>HTML</h2>
+  <pre><code class="html">
+  &lt;a href="#"&gt;
+    &lt;img class="orange" src="orange.png"&gt;
+  &lt;/a&gt;
+  </code></pre>
+
+  <h2>CSS</h2>
+  <pre><code class="css">
+  .orange {
+    -webkit-filter: blur(1);
+    -webkit-transition: -webkit-filter 0.5s;
+  }
+  .orange:hover {
+    -webkit-filter: blur(0);
+    -webkit-transition: -webkit-filter 0.1s;
+  }
+  </code></pre>
+</div>
+
+<script src="jquery-1.9.1.min.js"></script>
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

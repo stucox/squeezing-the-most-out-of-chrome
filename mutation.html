@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mutation Observers Demo</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+
+  <style>
+  #images {
+    height: 64px;
+  }
+  #log {
+    display: block;
+    width: 90%;
+    height: 200px;
+  }
+  </style>
+</head>
+<body>
+
+<h1>Demo 4: Mutation Observers</h1>
+
+<div class="demo clearfix">
+  <h2>Demo</h2>
+  <div id="images"></div>
+  <textarea id="log"></textarea>
+  <button id="add">Add kitten</button>
+</div>
+
+<div class="code">
+  <h2>HTML</h2>
+  <pre><code class="html">
+  &lt;div id="images"&gt;&lt;/div&gt;
+  &lt;button id="add"&gt;Add kitten&lt;/button&gt;
+  &lt;output id="log"&gt;&lt;/output&gt;
+  </code></pre>
+</div>
+
+<div class="code">
+  <h2>JavaScript</h2>
+  <pre><code class="javascript">
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if(mutation.addedNodes.length) {
+        $('#log')[0].innerHTML += 'Kitten added!\n';
+      }
+    });
+  });
+
+  var target = document.querySelector('#images');
+  var config = { childList: true };
+  observer.observe(target, config);
+  </code></pre>
+</div>
+
+<script src="jquery-1.9.1.min.js"></script>
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+$('#add').on('click', function () {
+  $('#images').append('<img src="kitten.jpg">');
+});
+
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    $('#log')[0].innerHTML += 'Kitten added!\n';
+  });
+});
+
+var target = document.querySelector('#images');
+var config = { childList: true };
+observer.observe(target, config);
+</script>
+
+</body>
+</html>
